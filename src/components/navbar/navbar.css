@@ -1,0 +1,27 @@
+.navbar {
+  font-family: "Kaushan Script", cursive;
+  padding: 1rem 2rem;
+  height: var(--navbar-height);
+  box-shadow: 1px 1px 5px var(--grey);
+  display: flex;
+  justify-content: space-between;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.logo-name {
+  font-size: 1.5rem;
+}
+.logo,
+.logo-name {
+  cursor: pointer;
+}
+.profile-icon {
+  font-size: 2rem;
+}

@@ -1,0 +1,15 @@
+@import url("https://grapheneui.netlify.app/Components/components.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --primary-color: #e8eaed;
+  --secondary-color: #202124;
+
+  --grey: #666667;
+  --navbar-height: 10vh;
+}
+body {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
