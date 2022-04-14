@@ -2,7 +2,7 @@
   font-family: "Kaushan Script", cursive;
   padding: 1rem 2rem;
   height: var(--navbar-height);
-  box-shadow: 1px 1px 5px var(--grey);
+  background-color: var(--dark-grey);
   display: flex;
   justify-content: space-between;
 }
@@ -24,4 +24,24 @@
 }
 .profile-icon {
   font-size: 2rem;
+}
+.search-bar-div {
+  padding: 0 1rem;
+  width: 35%;
+  height: 2.5rem;
+  background: var(--grey);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+.search-bar {
+  padding: 0 1rem;
+  background: var(--grey);
+  color: var(--primary-color);
+  font-size: 1rem;
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+}
+::placeholder {
+  color: var(--primary-color);
 }

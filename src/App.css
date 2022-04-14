@@ -4,8 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   --primary-color: #e8eaed;
-  --secondary-color: #202124;
-
+  --secondary-color: #18191b;
+  --dark-grey: #242527;
   --grey: #666667;
   --navbar-height: 10vh;
 }
