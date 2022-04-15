@@ -1,0 +1,47 @@
+.navbar {
+  font-family: "Kaushan Script", cursive;
+  padding: 1rem 2rem;
+  height: var(--navbar-height);
+  background-color: var(--dark-grey);
+  display: flex;
+  justify-content: space-between;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.logo-name {
+  font-size: 1.5rem;
+}
+.logo,
+.logo-name {
+  cursor: pointer;
+}
+.profile-icon {
+  font-size: 2rem;
+}
+.search-bar-div {
+  padding: 0 1rem;
+  width: 35%;
+  height: 2.5rem;
+  background: var(--grey);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+.search-bar {
+  padding: 0 1rem;
+  background: var(--grey);
+  color: var(--primary-color);
+  font-size: 1rem;
+  border: 1px solid transparent;
+  outline: 1px solid transparent;
+}
+::placeholder {
+  color: var(--primary-color);
+}
