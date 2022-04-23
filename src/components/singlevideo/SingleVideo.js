@@ -8,7 +8,7 @@ import { FaClock } from "react-icons/fa";
 const SingleVideo = ({ id }) => {
   return videos.map((video) =>
     video._id === id ? (
-      <div className="player-wrapper">
+      <div className="player-wrapper" key={video._id}>
         <ReactPlayer
           width="100%"
           className="react-player"

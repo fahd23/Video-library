@@ -24,7 +24,13 @@
 }
 
 @media screen and (max-width: 950px) {
-  .sidebar {
-    display: none;
+  .trans-on {
+    left: 0;
+    transition: left 0.5s ease-out;
+  }
+
+  .trans-off {
+    left: -20rem;
+    transition: left 1s ease-out;
   }
 }

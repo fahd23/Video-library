@@ -5,7 +5,7 @@
   width: 22.1rem;
   border-radius: 8px;
   color: var(--primary-color);
-  box-shadow: #1c2d47 0px 0px 5px 1px;
+  box-shadow: 0 2px 10px var(--dark-grey);
   cursor: pointer;
 }
 .video-banner {
@@ -35,8 +35,23 @@
   font-size: 0.8rem;
   font-weight: 600;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
   .video-card {
-    width: 100%;
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .video-card {
+    width: 18rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .video-card {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .video-card {
+    width: 23rem;
   }
 }
