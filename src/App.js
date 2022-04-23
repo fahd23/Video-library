@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Homepage } from "./pages";
+import { Homepage, SingleVideoPage } from "./pages";
 import "./App.css";
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
         <Route path="/watchlater" element={<Homepage />} />
         <Route path="/liked" element={<Homepage />} />
         <Route path="/history" element={<Homepage />} />
+        <Route path="/video/:videoId" element={<SingleVideoPage />} />
         <Route path="*" element={<Homepage />} />
       </Routes>
     </div>

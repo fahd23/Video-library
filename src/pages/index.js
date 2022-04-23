@@ -1,3 +1,4 @@
 import Homepage from "./Homepage";
+import SingleVideoPage from "./SingleVideoPage";
 
-export { Homepage };
+export { Homepage, SingleVideoPage };

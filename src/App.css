@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap");
+
 :root {
   --primary-color: #e8eaed;
   --secondary-color: #18191b;
@@ -12,4 +14,48 @@
 body {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  font-family: "Encode Sans", sans-serif;
+}
+.flex {
+  display: flex;
+}
+.p-top-1 {
+  padding-top: 1rem;
+}
+.p-top-5px {
+  padding-top: 5px;
+}
+.f-w-bold {
+  font-weight: bold;
+}
+.f-w-500 {
+  font-weight: 500;
+}
+.align-item-c {
+  align-items: center;
+}
+/* Homepage video listing */
+.video-listing {
+  margin: 1rem;
+  margin-left: 17rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+@media screen and (max-width: 950px) {
+  .video-listing {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4rem;
+    column-gap: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .video-card {
+    width: 100%;
+  }
 }

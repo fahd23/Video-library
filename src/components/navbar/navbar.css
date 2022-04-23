@@ -5,6 +5,8 @@
   background-color: var(--dark-grey);
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 .nav-logo {
   display: flex;
@@ -44,4 +46,9 @@
 }
 ::placeholder {
   color: var(--primary-color);
+}
+@media screen and (max-width: 950px) {
+  .search-bar-div {
+    display: none;
+  }
 }
