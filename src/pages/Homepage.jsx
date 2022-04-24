@@ -12,10 +12,10 @@ function Homepage() {
         <Sidebar />
         <div className="video-listing-header">
           <div className="category-items">
-            <span className="video-icons">All</span>
-            <span className="video-icons">World Cup</span>
-            <span className="video-icons">IPL</span>
-            <span className="video-icons">Others</span>
+            <span className="chips chip-active">All</span>
+            <span className="chips">World Cup</span>
+            <span className="chips">IPL</span>
+            <span className="chips">Others</span>
           </div>
           <div className="video-listing">
             {videos.map((video) => {

@@ -10,6 +10,7 @@
   --dark-grey: #252628;
   --grey: #666667;
   --navbar-height: 10vh;
+  --accent-color: #f03939;
 }
 body {
   color: var(--primary-color);
@@ -50,6 +51,20 @@ body {
   display: flex;
   gap: 1rem;
   margin: 1rem;
+}
+.chips {
+  background-color: var(--grey);
+  padding: 6px 10px;
+  width: fit-content;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  gap: 10px;
+}
+.chip-active {
+  background-color: var(--accent-color);
 }
 @media screen and (max-width: 950px) {
   .video-listing-header {

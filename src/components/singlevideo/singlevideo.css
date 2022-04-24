@@ -11,17 +11,7 @@ hr {
 .react-player {
   min-height: 68vh;
 }
-.video-icons {
-  background-color: var(--grey);
-  padding: 6px 10px;
-  width: fit-content;
-  border-radius: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  cursor: pointer;
-  gap: 10px;
-}
+
 .icons-container {
   display: flex;
   gap: 1rem;
