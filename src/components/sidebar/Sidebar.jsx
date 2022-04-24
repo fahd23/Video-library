@@ -8,14 +8,16 @@ import {
   FaClock,
   FaHistory,
 } from "react-icons/fa";
+import { useVideo } from "context/Video-context";
 
 export default function Sidebar() {
+  const { sidebar } = useVideo();
   const getActiveLinkStyle = ({ isActive }) => ({
     backgroundColor: isActive ? "var(--grey)" : "",
     width: isActive ? "100%" : "",
   });
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${sidebar ? "trans-on" : "trans-off"}`}>
       <NavLink to="/" className="sidebar-icon" style={getActiveLinkStyle}>
         <FaHome className="icons" /> Home
       </NavLink>

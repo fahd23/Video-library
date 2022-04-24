@@ -1,5 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import { Homepage } from "./pages";
+import {
+  Historypage,
+  Homepage,
+  Likedpage,
+  Playlistpage,
+  SingleVideoPage,
+  Watchlater,
+} from "./pages";
 import "./App.css";
 
 function App() {
@@ -7,10 +14,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/playlist" element={<Homepage />} />
-        <Route path="/watchlater" element={<Homepage />} />
-        <Route path="/liked" element={<Homepage />} />
-        <Route path="/history" element={<Homepage />} />
+        <Route path="/playlist" element={<Playlistpage />} />
+        <Route path="/watchlater" element={<Watchlater />} />
+        <Route path="/liked" element={<Likedpage />} />
+        <Route path="/history" element={<Historypage />} />
+        <Route path="/video/:videoId" element={<SingleVideoPage />} />
         <Route path="*" element={<Homepage />} />
       </Routes>
     </div>

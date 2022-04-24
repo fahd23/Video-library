@@ -1,0 +1,33 @@
+hr {
+  margin-top: 1rem;
+  border: 1px solid transparent;
+  border-top: 1.5px solid var(--grey);
+}
+
+.player-wrapper {
+  padding: 2.5rem;
+  margin-left: 15.5rem;
+}
+.react-player {
+  min-height: 68vh;
+}
+
+.icons-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+@media screen and (max-width: 950px) {
+  .player-wrapper {
+    margin: auto;
+  }
+  .react-player {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .react-player {
+    min-height: 0;
+  }
+}

@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import { CgProfile } from "react-icons/cg";
 import { BiSearch } from "react-icons/bi";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
+import { useVideo } from "context/Video-context";
+
 export default function Navbar() {
+  const { setSidebar } = useVideo();
   return (
     <div className="navbar">
       <div className="nav-logo">
+        <GiHamburgerMenu
+          className="hamburger-icon"
+          onClick={() => setSidebar((prev) => !prev)}
+        />
         <img
           src="https://res.cloudinary.com/dgqwptcvp/image/upload/v1649755954/images-removebg-preview_6_mcmvzs.png"
           alt="CricStream Logo"
           className="logo"
         />
-        <h1 className="logo-name">CricStream</h1>
+        <Link to="/" className="logo-name">
+          CricStream
+        </Link>
       </div>
       <div className="search-bar-div">
         <BiSearch />

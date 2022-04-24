@@ -1,12 +1,16 @@
 .sidebar {
   font-size: 1.1rem;
   font-weight: 500;
-  width: 15rem;
-  height: calc(100vh - var(--navbar-height));
+  min-width: 15.5rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
   background-color: var(--dark-grey);
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
+  z-index: 5;
 }
 .sidebar-icon {
   padding: 0.8rem 2rem;
@@ -17,4 +21,16 @@
 }
 .icons {
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 950px) {
+  .trans-on {
+    left: 0;
+    transition: left 0.5s ease-out;
+  }
+
+  .trans-off {
+    left: -20rem;
+    transition: left 1s ease-out;
+  }
 }

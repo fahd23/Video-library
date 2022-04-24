@@ -5,6 +5,8 @@
   background-color: var(--dark-grey);
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 .nav-logo {
   display: flex;
@@ -17,10 +19,15 @@
 }
 .logo-name {
   font-size: 1.5rem;
+  color: var(--primary-color);
 }
 .logo,
 .logo-name {
   cursor: pointer;
+}
+.hamburger-icon {
+  display: none;
+  font-size: 1.5rem;
 }
 .profile-icon {
   font-size: 2rem;
@@ -44,4 +51,14 @@
 }
 ::placeholder {
   color: var(--primary-color);
+}
+
+@media screen and (max-width: 950px) {
+  .search-bar-div {
+    display: none;
+  }
+  .hamburger-icon {
+    display: flex;
+    margin-right: 1rem;
+  }
 }

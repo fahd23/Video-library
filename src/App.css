@@ -2,14 +2,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap");
+
 :root {
   --primary-color: #e8eaed;
   --secondary-color: #18191b;
-  --dark-grey: #242527;
+  --dark-grey: #252628;
   --grey: #666667;
   --navbar-height: 10vh;
+  --accent-color: #f03939;
 }
 body {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  font-family: "Encode Sans", sans-serif;
+}
+.flex {
+  display: flex;
+}
+.p-top-1 {
+  padding-top: 1rem;
+}
+.p-top-5px {
+  padding-top: 5px;
+}
+.f-w-bold {
+  font-weight: bold;
+}
+.f-w-500 {
+  font-weight: 500;
+}
+.align-item-c {
+  align-items: center;
+}
+/* Homepage video listing */
+.video-listing-header {
+  margin-left: 17rem;
+  display: flex;
+  flex-direction: column;
+}
+.video-listing {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.category-items {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+.chips {
+  background-color: var(--grey);
+  padding: 6px 10px;
+  width: fit-content;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  gap: 10px;
+}
+.chip-active {
+  background-color: var(--accent-color);
+}
+@media screen and (max-width: 950px) {
+  .video-listing-header {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .video-listing {
+    margin: auto;
+    justify-content: center;
+  }
+  .category-items {
+    justify-content: space-evenly;
+    margin: 1.3rem 1.6rem;
+  }
 }
