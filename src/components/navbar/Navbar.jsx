@@ -4,10 +4,10 @@ import { CgProfile } from "react-icons/cg";
 import { BiSearch } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { useVideo } from "context/Video-context";
+import { useData } from "context/Data-context";
 
 export default function Navbar() {
-  const { setSidebar } = useVideo();
+  const { setSidebar } = useData();
   return (
     <div className="navbar">
       <div className="nav-logo">
