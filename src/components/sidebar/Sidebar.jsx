@@ -8,10 +8,10 @@ import {
   FaClock,
   FaHistory,
 } from "react-icons/fa";
-import { useVideo } from "context/Video-context";
+import { useData } from "context/Data-context";
 
 export default function Sidebar() {
-  const { sidebar } = useVideo();
+  const { sidebar } = useData();
   const getActiveLinkStyle = ({ isActive }) => ({
     backgroundColor: isActive ? "var(--grey)" : "",
     width: isActive ? "100%" : "",
