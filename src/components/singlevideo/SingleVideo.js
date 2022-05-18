@@ -4,8 +4,15 @@ import "./singlevideo.css";
 import { videos } from "backend/db/videos";
 import { BiLike } from "react-icons/bi";
 import { FaClock } from "react-icons/fa";
+import { useData } from "context/Data-context";
 
 const SingleVideo = ({ id }) => {
+  const {
+    likeState: { like },
+    likeDispatch,
+    watchlaterState: { watchlater },
+    watchlaterDispatch,
+  } = useData();
   const video = videos.find((video) => video._id === id);
   return (
     <div className="player-wrapper" key={video._id}>
@@ -19,10 +26,33 @@ const SingleVideo = ({ id }) => {
         <h2 className="p-top-1">{video.title}</h2>
         <p className="p-top-5px f-w-500">{video.creator}</p>
         <div className="icons-container">
-          <span className="chips">
-            <BiLike /> Like
+          <span
+            className={`chips ${
+              like.find((item) => item._id === video._id) ? "chip-active" : ""
+            }`}
+            onClick={() => {
+              likeDispatch({
+                type: "ADD_TO_LIKE",
+                payload: video,
+              });
+            }}
+          >
+            <BiLike />
+            {like.find((item) => item._id === video._id) ? "Liked" : "Like"}
           </span>
-          <span className="chips">
+          <span
+            className={`chips ${
+              watchlater.find((item) => item._id === video._id)
+                ? "chip-active"
+                : ""
+            }`}
+            onClick={() => {
+              watchlaterDispatch({
+                type: "ADD_TO_WATCHLATER",
+                payload: video,
+              });
+            }}
+          >
             <FaClock /> Watch Later
           </span>
         </div>
