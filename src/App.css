@@ -66,6 +66,13 @@ body {
 .chip-active {
   background-color: var(--accent-color);
 }
+.page-heading {
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+.alert-message {
+  font-weight: 600;
+}
 @media screen and (max-width: 950px) {
   .video-listing-header {
     margin: auto;
@@ -73,8 +80,13 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  .page-heading,
+  .alert-message {
+    display: flex;
+    justify-content: center;
+  }
   .video-listing {
-    margin: auto;
+    margin: 1rem auto;
     justify-content: center;
   }
   .category-items {

@@ -10,20 +10,31 @@ const Likedpage = () => {
     likeState: { like },
   } = useData();
   return (
-    <div>
+    <>
       <Navbar />
       <div className="flex flex-wrap">
         <Sidebar />
         <div className="video-listing-header">
-          <h2>Like</h2>
-          <div className="video-listing">
-            {like.map((video) => {
-              return <Videocard video={video} key={video._id} />;
-            })}
-          </div>
+          <h2 className="page-heading">
+            Like{" "}
+            {like.length !== 0
+              ? `(${like.length} ${like.length === 1 ? "Video" : "Videos"})`
+              : ""}
+          </h2>
+          {like.length === 0 ? (
+            <p className="alert-message">
+              Looks like you haven't liked anything yet.
+            </p>
+          ) : (
+            <div className="video-listing">
+              {like.map((video) => {
+                return <Videocard video={video} key={video._id} />;
+              })}
+            </div>
+          )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

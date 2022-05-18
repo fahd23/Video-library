@@ -9,18 +9,33 @@ const Watchlater = () => {
     watchlaterState: { watchlater },
   } = useData();
   return (
-    <div>
+    <>
       <Navbar />
-      <Sidebar />
-      <div className="video-listing-header">
-        <h2>Watch Later</h2>
-        <div className="video-listing">
-          {watchlater.map((video) => {
-            return <Videocard video={video} key={video._id} />;
-          })}
+      <div className="flex flex-wrap">
+        <Sidebar />
+        <div className="video-listing-header">
+          <h2 className="page-heading">
+            Watch Later
+            {watchlater.length !== 0
+              ? ` (${watchlater.length} ${
+                  watchlater.length === 1 ? "Video" : "Videos"
+                })`
+              : ""}
+          </h2>
+          {watchlater.length === 0 ? (
+            <p className="alert-message">
+              Looks like you haven't added anything yet in Watch Later.
+            </p>
+          ) : (
+            <div className="video-listing">
+              {watchlater.map((video) => {
+                return <Videocard video={video} key={video._id} />;
+              })}
+            </div>
+          )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

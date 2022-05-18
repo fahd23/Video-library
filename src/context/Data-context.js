@@ -2,12 +2,7 @@ import { createContext, useReducer, useContext, useState } from "react";
 import { likeReducer } from "reducer/like-reducer";
 import { watchlaterReducer } from "reducer/watchLater-reducer";
 
-const defaultValue = {
-  like: [],
-  watchlater: [],
-};
-
-const DataContext = createContext(defaultValue);
+const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
   const [sidebar, setSidebar] = useState(false);
