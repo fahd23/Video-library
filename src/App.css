@@ -74,6 +74,16 @@ body {
   margin-left: 1rem;
   font-weight: 600;
 }
+.clear-history-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  width: fit-content;
+  border-radius: 5px;
+  margin: 0.5rem 1rem;
+}
+
 @media screen and (max-width: 950px) {
   .video-listing-header {
     margin: auto;
