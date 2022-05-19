@@ -11,7 +11,7 @@ export const historyReducer = (state, action) => {
       return {
         history: [],
       };
-    case "default":
+    default:
       return state;
   }
 };
