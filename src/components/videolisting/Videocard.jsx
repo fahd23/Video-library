@@ -2,11 +2,24 @@ import React from "react";
 import "./videocard.css";
 import { Link } from "react-router-dom";
 import { FaEllipsisV } from "react-icons/fa";
+import { useData } from "context/Data-context";
 
 export function Videocard({ video }) {
+  const {
+    historyState: { history },
+    historyDispatch,
+  } = useData();
   return (
     <Link to={`/video/${video._id}`}>
-      <div className="video-card">
+      <div
+        className="video-card"
+        onClick={() => {
+          historyDispatch({
+            type: "ADD_TO_HISTORY",
+            payload: video,
+          });
+        }}
+      >
         <img
           className="video-banner"
           src={`https://i.ytimg.com/vi/${video._id}/0.jpg`}
