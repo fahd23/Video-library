@@ -22,7 +22,7 @@ export const watchlaterReducer = (state, action) => {
       };
     case "CLEAR":
       return payload;
-    case "default":
+    default:
       return state;
   }
 };

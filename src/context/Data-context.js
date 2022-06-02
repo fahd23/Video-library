@@ -2,6 +2,7 @@ import { createContext, useReducer, useContext, useState } from "react";
 import { likeReducer } from "reducer/like-reducer";
 import { watchlaterReducer } from "reducer/watchLater-reducer";
 import { historyReducer } from "reducer/history-reducer";
+import { playlistReducer } from "reducer/playlist-reducer";
 
 const DataContext = createContext();
 
@@ -16,6 +17,9 @@ const DataProvider = ({ children }) => {
   const [historyState, historyDispatch] = useReducer(historyReducer, {
     history: [],
   });
+  const [playlistState, playlistDispatch] = useReducer(playlistReducer, {
+    playlists: [],
+  });
   return (
     <DataContext.Provider
       value={{
@@ -27,6 +31,8 @@ const DataProvider = ({ children }) => {
         watchlaterDispatch,
         historyState,
         historyDispatch,
+        playlistState,
+        playlistDispatch,
       }}
     >
       {children}

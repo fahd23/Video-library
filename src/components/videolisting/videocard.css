@@ -35,6 +35,12 @@
   font-size: 0.8rem;
   font-weight: 600;
 }
+.display-flex {
+  display: flex;
+}
+.display-none {
+  display: none;
+}
 @media screen and (max-width: 1200px) {
   .video-card {
     width: 20rem;
