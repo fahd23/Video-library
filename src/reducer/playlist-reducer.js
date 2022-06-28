@@ -4,6 +4,11 @@ export const playlistReducer = (state, action) => {
 
   switch (type) {
     case "ADD_TO_PLAYLIST":
+      if (playlists.filter((item) => item._id === payload._id).length === 1)
+        return {
+          ...state,
+          playlists: [...playlists.filter((item) => item._id !== payload._id)],
+        };
       return {
         ...state,
         playlists: [...playlists, payload],
@@ -22,7 +27,11 @@ export const playlistReducer = (state, action) => {
     //         }
     //       : playlist
     //   );
-    // case "REMOVE_FROM_PLAYLIST":
+    case "REMOVE_FROM_PLAYLIST":
+      return {
+        ...state,
+        playlists: [...playlists.filter((item) => item._id !== payload._id)],
+      };
     //   return playlists.map((playlist) =>
     //     playlist._id === payload.playlist._id
     //       ? {

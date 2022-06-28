@@ -44,6 +44,9 @@ body {
 .position-relative {
   position: relative;
 }
+.pointer {
+  cursor: pointer;
+}
 /* Homepage video listing */
 .video-listing-header {
   margin-left: 17rem;
@@ -118,7 +121,18 @@ body {
   background-color: var(--dark-grey);
   font-size: 0.95rem;
 }
-
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
 @media screen and (max-width: 950px) {
   .video-listing-header {
     margin: auto;

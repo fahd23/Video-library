@@ -11,6 +11,7 @@ export function Videocard({ video }) {
     watchlaterState: { watchlater },
     watchlaterDispatch,
     historyDispatch,
+    playlistState: { playlists },
     playlistDispatch,
   } = useData();
 
@@ -65,7 +66,9 @@ export function Videocard({ video }) {
               }
             >
               <FaPlayCircle />
-              Add to Playlist
+              {playlists.find((item) => item._id === video._id)
+                ? "Remove from Playlist"
+                : "Add to Playlist"}
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import Navbar from "components/navbar/Navbar";
 import Sidebar from "components/sidebar/Sidebar";
 import { videos } from "backend/db/videos";
 import { Videocard } from "components/videolisting/Videocard";
+import PlaylistInputForm from "components/shared/PlaylistInputForm";
 
 function Homepage() {
   return (
@@ -23,6 +24,9 @@ function Homepage() {
             })}
           </div>
         </div>
+      </div>
+      <div className="modal">
+        <PlaylistInputForm />
       </div>
     </div>
   );
