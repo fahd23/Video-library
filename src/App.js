@@ -3,7 +3,6 @@ import {
   Historypage,
   Homepage,
   Likedpage,
-  Playlistpage,
   SingleVideoPage,
   Watchlater,
 } from "./pages";
@@ -14,7 +13,6 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/playlist" element={<Playlistpage />} />
         <Route path="/watchlater" element={<Watchlater />} />
         <Route path="/liked" element={<Likedpage />} />
         <Route path="/history" element={<Historypage />} />

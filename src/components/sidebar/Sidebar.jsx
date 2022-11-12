@@ -21,13 +21,6 @@ export default function Sidebar() {
       <NavLink to="/" className="sidebar-icon" style={getActiveLinkStyle}>
         <FaHome className="icons" /> Home
       </NavLink>
-      <NavLink
-        to="/playlist"
-        className="sidebar-icon"
-        style={getActiveLinkStyle}
-      >
-        <FaPlayCircle className="icons" /> Playlist
-      </NavLink>
       <NavLink to="/liked" className="sidebar-icon" style={getActiveLinkStyle}>
         <FaHeart className="icons" /> Liked
       </NavLink>
